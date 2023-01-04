@@ -8,3 +8,15 @@
 	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
 }
+
+:root {
+	--mainBackgroundColor: #4285f4;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: var(--mainBackgroundColor);
+}
