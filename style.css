@@ -11,6 +11,13 @@
 
 :root {
 	--mainBackgroundColor: #4285f4;
+	--white: #fff;
+	--lightGray: #d4dbe5;
+	--gray: #aaa;
+	--black: #000;
+	--darkGray: #707070;
+	--dirtyWhite: #dfdfdf;
+	--yellow: #f1c80b;
 }
 
 body {
@@ -19,4 +26,115 @@ body {
 	align-items: center;
 	min-height: 100vh;
 	background: var(--mainBackgroundColor);
+}
+
+.container {
+	width: 450px;
+	background: var(--white);
+	border-radius: 8px;
+}
+
+.container h2 {
+	font-weight: 600;
+	font-size: 1.31rem;
+	padding: 1rem 1.175rem;
+	border-bottom: 1px solid var(--lightGray);
+}
+
+.wrapper {
+	margin: 1.25rem 1.75rem;
+}
+
+.wrapper .input-box {
+	position: relative;
+}
+
+.input-box input {
+	width: 100%;
+	height: 53px;
+	color: var(--black);
+	background: none;
+	font-size: 1.06rem;
+	font-weight: 500;
+	border-radius: 4px;
+	border: 1px solid var(--gray);
+	padding: 0 2.85rem 0 1rem; 
+}
+
+.input-box span {
+	position: absolute;
+	right: 13px;
+	cursor: pointer;
+	line-height: 53px;
+	color: var(--darkGray);
+}
+
+.wrapper .pass-indicator {
+	width: 100%;
+	height: 4px;
+	position: relative;
+	background: var(--dirtyWhite);
+	margin-top: 0.75rem;
+	border-radius: 25px;
+}
+
+.pass-indicator::before {
+	position: absolute;
+	content: "";
+	width: 50%;
+	height: 100%;
+	border-radius: inherit;
+	background: var(--yellow);
+}
+
+.wrapper .pass-length {
+	margin: 1.56rem 0 1.25rem;
+}
+
+.pass-length .details{
+	display: flex;
+	justify-content: space-between;
+}
+
+.pass-length input {
+	width: 100%;
+	height: 5px;
+}
+
+.pass-settings .options{
+	display: flex;
+	list-style: none;
+	flex-wrap: wrap;
+	margin-top: 1rem;
+}
+
+.pass-settings .options .option {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
+	width: calc(100% / 2);
+}
+
+.options .option input {
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+
+.options .option label {
+	cursor: pointer;
+	padding-left: 0.63rem;
+}
+
+.wrapper .generate-btn {
+	width: 100%;
+	color: var(--white);
+	border: none;
+	background: var(--mainBackgroundColor);
+	cursor: pointer;
+	font-size: 1.06rem;
+	text-transform: uppercase;
+	padding: 0.94rem 0;
+	margin: 0.94rem 0 1.3rem;
+	border-radius: 5px;
 }
