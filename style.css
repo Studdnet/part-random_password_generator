@@ -18,6 +18,9 @@
 	--darkGray: #707070;
 	--dirtyWhite: #dfdfdf;
 	--yellow: #f1c80b;
+	--red: #e64A4A;
+	--green: rgb(44, 212, 44);
+	--orange: rgb(255, 165, 0);
 }
 
 body {
@@ -85,7 +88,22 @@ body {
 	width: 50%;
 	height: 100%;
 	border-radius: inherit;
-	background: var(--yellow);
+	transition: width 0.3s ease;
+}
+
+.pass-indicator#weak::before {
+	width: 20%;
+	background:  var(--red);
+}
+
+.pass-indicator#medium::before {
+	width: 60%;
+	background:  var(--orange);
+}
+
+.pass-indicator#strong::before {
+	width: 100%;
+	background:  var(--green);
 }
 
 .wrapper .pass-length {
